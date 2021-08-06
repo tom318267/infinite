@@ -12,7 +12,7 @@ const ShowHero = lazy(() => import("./components/ShowHero"));
 
 const App = () => {
   return (
-    <div className="App">
+    <div className="App overflow-hidden">
       <Router>
         <Navbar />
         <Switch>
