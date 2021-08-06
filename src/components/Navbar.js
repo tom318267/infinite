@@ -21,14 +21,13 @@ const Navbar = () => {
           <Link to="/search">
             <h3 className="mr-4 cursor-pointer">Search</h3>
           </Link>
-          <Link to="/contact">
-            <h3 className={user ? "mr-4 cursor-pointer" : "cursor-pointer"}>
-              Contact
-            </h3>
-          </Link>
-          {user && (
+          {user ? (
             <Link onClick={() => auth.signOut()}>
               <h3 className="cursor-pointer">Logout</h3>
+            </Link>
+          ) : (
+            <Link to="/register">
+              <h3 className="cursor-pointer">Login</h3>
             </Link>
           )}
         </div>

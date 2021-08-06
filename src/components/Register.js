@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { useHistory } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { login } from "../features/userSlice";
 import { auth } from "../firebase";
 
@@ -72,6 +72,12 @@ const Register = () => {
           >
             Submit
           </button>
+          <h2 className="mt-2 text-lg">
+            Already a member?{" "}
+            <Link className="underline" to="/login">
+              Login
+            </Link>
+          </h2>
         </form>
       </div>
     </div>

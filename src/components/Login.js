@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { auth } from "../firebase";
 import { login } from "../features/userSlice";
-import { useHistory } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -55,6 +55,12 @@ const Login = () => {
           >
             Submit
           </button>
+          <h2 className="mt-2 text-lg">
+            Not a member?{" "}
+            <Link className="underline" to="/register">
+              Register
+            </Link>
+          </h2>
         </form>
       </div>
     </div>

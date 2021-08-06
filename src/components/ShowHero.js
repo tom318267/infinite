@@ -1,16 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchHero, selectHero } from "../features/heroesSlice";
 
 const ShowHero = ({ match }) => {
-  const [heroInfo, setHeroInfo] = useState("");
   const dispatch = useDispatch();
   const hero = useSelector(selectHero);
 
   useEffect(() => {
     dispatch(fetchHero(match.params.id));
-    setHeroInfo(hero);
-  }, [dispatch]);
+  }, [match.params.id, dispatch]);
 
   return hero ? (
     <div class="min-h-screen bg-purple flex justify-center items-center">

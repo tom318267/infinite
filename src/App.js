@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
 import Navbar from "./components/Navbar";
 import SpinnerLoad from "./components/SpinnerLoad";
+import PrivateRoute from "./components/PrivateRoute";
 const Home = lazy(() => import("./components/Home"));
 const Login = lazy(() => import("./components/Login"));
 const Register = lazy(() => import("./components/Register"));
@@ -19,7 +20,7 @@ const App = () => {
             <Route exact path="/" component={Home} />
             <Route path="/login" component={Login} />
             <Route path="/register" component={Register} />
-            <Route path="/search" component={Search} />
+            <PrivateRoute path="/search" component={Search} />
             <Route path="/hero/:id" component={ShowHero} />
           </Suspense>
         </Switch>
