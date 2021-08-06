@@ -7,6 +7,7 @@ const Home = lazy(() => import("./components/Home"));
 const Login = lazy(() => import("./components/Login"));
 const Register = lazy(() => import("./components/Register"));
 const Search = lazy(() => import("./components/Search"));
+const ShowHero = lazy(() => import("./components/ShowHero"));
 
 const App = () => {
   return (
@@ -19,7 +20,7 @@ const App = () => {
             <Route path="/login" component={Login} />
             <Route path="/register" component={Register} />
             <Route path="/search" component={Search} />
-            <Route path="/spinner" component={SpinnerLoad} />
+            <Route path="/hero/:id" component={ShowHero} />
           </Suspense>
         </Switch>
       </Router>

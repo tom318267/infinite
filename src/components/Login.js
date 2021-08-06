@@ -33,15 +33,15 @@ const Login = () => {
     <div className="bg-purple w-screen h-screen">
       <div className="w-3/4 my-0 mx-auto font-alatsi text-white pt-12">
         <form className="flex flex-col py-20">
-          <h1 className="text-4xl sm:text-4xl text-center mb-8">Login</h1>
-          <label>Email Address</label>
+          <h1 className="text-4xl sm:text-5xl text-center mb-8">Login</h1>
+          <label className="sm:text-xl">Email Address</label>
           <input
             onChange={(e) => setEmail(e.target.value)}
             className="email border text-black rounded-md pl-2 outline-none py-1"
             type="email"
             value={email}
           />
-          <label>Password</label>
+          <label className="sm:text-xl">Password</label>
           <input
             onChange={(e) => setPassword(e.target.value)}
             className="password border text-black rounded-md pl-2 outline-none py-1 mb-4"
@@ -50,7 +50,7 @@ const Login = () => {
           />
           <button
             onClick={loginToApp}
-            className="contact-button p-2 text-white bg-light_purple font-bold rounded-md"
+            className="contact-button sm:text-xl p-2 text-white bg-light_purple font-bold rounded-md"
             type="submit"
           >
             Submit

@@ -32,13 +32,16 @@ const Search = () => {
           type="text"
           value={input}
         />
-        <button type="submit" className="bg-light_purple p-2 text-white">
-          Submit
-        </button>
       </div>
       <div className="flex flex-wrap gap-10 justify-center pt-40">
         {filterHeroes.map((hero) => (
-          <HeroCard name={hero.name} img={hero.images.sm} />
+          <HeroCard
+            key={hero.id}
+            hero={hero}
+            id={hero.id}
+            name={hero.name}
+            img={hero.images.sm}
+          />
         ))}
       </div>
     </div>

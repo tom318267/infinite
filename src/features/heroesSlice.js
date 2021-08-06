@@ -49,4 +49,6 @@ export const fetchHero = (id) => async (dispatch) => {
 // Selectors
 export const selectHeroes = (state) => state.heroes.heroes;
 
+export const selectHero = (state) => state.heroes.hero;
+
 export default heroesSlice.reducer;

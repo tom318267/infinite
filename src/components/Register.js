@@ -43,22 +43,22 @@ const Register = () => {
     <div className="bg-purple w-screen h-screen">
       <div className="w-3/4 my-0 mx-auto font-alatsi text-white pt-12">
         <form className="flex flex-col py-20">
-          <h1 className="text-4xl sm:text-4xl text-center mb-8">Register</h1>
-          <label>Name</label>
+          <h1 className="text-4xl sm:text-5xl text-center mb-8">Register</h1>
+          <label className="sm:text-xl">Name</label>
           <input
             onChange={(e) => setName(e.target.value)}
             className="name border text-black rounded-md pl-2 outline-none py-1"
             type="text"
             value={name}
           />
-          <label>Email</label>
+          <label className="sm:text-xl">Email</label>
           <input
             onChange={(e) => setEmail(e.target.value)}
             className="email border text-black rounded-md pl-2 outline-none py-1 mb-4"
             type="email"
             value={email}
           />
-          <label>Password</label>
+          <label className="sm:text-xl">Password</label>
           <input
             onChange={(e) => setPassword(e.target.value)}
             className="border text-black rounded-md pl-2 outline-none py-1 mb-4"
@@ -67,7 +67,7 @@ const Register = () => {
           />
           <button
             onClick={register}
-            className="contact-button p-2 text-white bg-light_purple font-bold rounded-md"
+            className="contact-button p-2 sm:text-xl text-white bg-light_purple font-bold rounded-md"
             type="submit"
           >
             Submit

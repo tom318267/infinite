@@ -10,9 +10,9 @@ const Navbar = () => {
   return (
     <div className="absolute z-10 w-full">
       <div className="flex justify-between text-white">
-        <div className="m-4 cursor-pointer">
+        <Link to="/" className="m-4 cursor-pointer">
           <img className="w-10" src={infinite} alt="" />
-        </div>
+        </Link>
 
         <div className="nav-items sm:text-xl flex items-center font-cuprum mr-8">
           <Link to="/">
