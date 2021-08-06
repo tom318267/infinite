@@ -12,7 +12,7 @@ const FunStats = () => {
 
   return (
     <div className="bg-lighter_purple w-screen h-full pb-20">
-      <img src={wave} alt="" />
+      <img src={wave} alt="wave" />
       <div data-aos="fade-up-right">
         <Card
           title="Create a Profile"
